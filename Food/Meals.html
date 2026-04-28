@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>الوجبات</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="myFunctions.js"></script>
+
+</head>
+<body>
+
+<div class="nav">
+<h2>🍽️ قمة الشام</h2>
+<div>
+<a href="home.html">Home</a>
+<a href="AboutUs.html">About Us</a>
+<a href="Meals.html">Meals</a>
+</div>
+</div>
+
+<h1 class="title">الوجبات</h1>
+
+<table>
+
+<tr>
+<th>اختيار</th>
+<th>الصورة</th>
+<th>الرمز</th>
+<th>الوجبة</th>
+<th>السعر</th>
+<th>تفاصيل</th>
+</tr>
+
+<!-- بروستد -->
+<tr>
+<td><input type="checkbox" class="meal" value="9000"></td>
+<td><img src="images/broasted.jpg" class="img"></td>
+<td>SF-001</td>
+<td>بروستد</td>
+<td>9000</td>
+<td><button onclick="toggleDetails('d1')">عرض</button></td>
+</tr>
+<tr id="d1" class="details">
+<td colspan="6">
+المطبخ: عربي<br>
+التصنيف: وجبات سريعة<br>
+المكونات: دجاج مقلي، بطاطا مقلية، بهارات خاصة، صوص ثوم
+</td>
+</tr>
+
+<!-- بيتزا -->
+<tr>
+<td><input type="checkbox" class="meal" value="8000"></td>
+<td><img src="images/pizza.jpg" class="img"></td>
+<td>SF-002</td>
+<td>بيتزا</td>
+<td>8000</td>
+<td><button onclick="toggleDetails('d2')">عرض</button></td>
+</tr>
+<tr id="d2" class="details">
+<td colspan="6">
+المطبخ: إيطالي<br>
+التصنيف: وجبات سريعة<br>
+المكونات: جبنة موزاريلا، صوص بندورة، زيتون، فطر، عجينة طازجة
+</td>
+</tr>
+
+<!-- شيش طاووق -->
+<tr>
+<td><input type="checkbox" class="meal" value="8500"></td>
+<td><img src="images/shish.jpg" class="img"></td>
+<td>SF-003</td>
+<td>شيش طاووق</td>
+<td>8500</td>
+<td><button onclick="toggleDetails('d3')">عرض</button></td>
+</tr>
+<tr id="d3" class="details">
+<td colspan="6">
+المطبخ: شرقي<br>
+التصنيف: مشاوي<br>
+المكونات: دجاج مشوي، بهارات، ليمون، ثوم، خبز
+</td>
+</tr>
+
+<!-- كبة -->
+<tr>
+<td><input type="checkbox" class="meal" value="6000"></td>
+<td><img src="images/kibbeh.jpg" class="img"></td>
+<td>SF-004</td>
+<td>كبة</td>
+<td>6000</td>
+<td><button onclick="toggleDetails('d4')">عرض</button></td>
+</tr>
+<tr id="d4" class="details">
+<td colspan="6">
+المطبخ: عربي<br>
+التصنيف: مقبلات<br>
+المكونات: برغل، لحم مفروم، بصل، بهارات
+</td>
+</tr>
+
+<!-- كباب -->
+<tr>
+<td><input type="checkbox" class="meal" value="9500"></td>
+<td><img src="images/kebab.jpg" class="img"></td>
+<td>SF-005</td>
+<td>كباب</td>
+<td>9500</td>
+<td><button onclick="toggleDetails('d5')">عرض</button></td>
+</tr>
+<tr id="d5" class="details">
+<td colspan="6">
+المطبخ: شرقي<br>
+التصنيف: مشاوي<br>
+المكونات: لحم مشوي، بصل، بقدونس، بهارات
+</td>
+</tr>
+
+</table>
+
+<br>
+
+<button class="btn" onclick="showForm()">متابعة</button>
+
+<div id="formDiv">
+
+<h2>معلومات الطلب</h2>
+
+<form onsubmit="return validateForm()">
+
+<input type="text" id="name" placeholder="Full Name"><br>
+<input type="text" id="account" placeholder="Account Number"><br>
+<input type="date" id="date"><br>
+<input type="text" id="phone" placeholder="Phone"><br>
+
+<button class="btn">إرسال</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
